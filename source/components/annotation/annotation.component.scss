@@ -1,0 +1,26 @@
+@import 'variables.scss';
+:host {
+	background-color: $annotationbgc;
+	display: block;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	section {
+		background-color: $annotationbgc;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		h1 {
+			align-items: center;
+			color: $annotationfc;
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+	}
+}
