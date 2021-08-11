@@ -7,8 +7,8 @@
 	width: 100%;
 	header {
 		height: 6rem;
-		margin: 0;
 		padding: 0;
+		margin: 0;
 		width: 100%;
 		nav {
 			background-color: rgba(5, 5, 5, 1);
@@ -59,7 +59,7 @@
 		padding: 0;
 		width: 100%;
 		section {
-			height: 1000px;
+			height: 100%;
 			margin: 0;
 			padding: 0;
 			width: 100%;
@@ -67,11 +67,18 @@
 				align-items: center;
 				color: white;
 				display: flex;
-				font-size: 3.6rem;
+				font-size: 3.2rem;
 				height: 100%;
 				justify-content: center;
 				margin: 0;
 				padding: 0;
+				width: 100%;
+			}
+			img {
+				background-position: center left;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height: 100%;
 				width: 100%;
 			}
 		}
@@ -86,7 +93,7 @@
 			align-items: center;
 			color: white;
 			display: flex;
-			font-size: 3.6rem;
+			font-size: 3.2rem;
 			height: 100%;
 			justify-content: center;
 			margin: 0;
