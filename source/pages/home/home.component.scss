@@ -90,7 +90,7 @@
 			grid-gap: 1.5rem;
 			grid-template-columns: repeat(
 				auto-fit,
-				clamp(14rem, calc(100% - 1.5rem), 26.5rem)
+				clamp(14rem, calc(100% - 1.5rem), 24rem)
 			);
 			height: min-content;
 			justify-content: center;
