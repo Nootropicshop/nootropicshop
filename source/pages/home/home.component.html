@@ -21,22 +21,20 @@
 	</section>
 	<section></section>
 	<section #showcase>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+		<div
+			*ngFor="let item of [].constructor(10); let i = index"
+		>
+			<span>
+				<img />
+			</span>
+			<span>
+				<span>
+					<h1>Nootropic Product</h1>
+					<h2>$50</h2>
+				</span>
+				<button>Ok</button>
+			</span>
+		</div>
 	</section>
 </main>
 <footer>

@@ -1,4 +1,5 @@
 import {
+	AfterViewInit,
 	Component,
 	ElementRef,
 	HostListener,
@@ -14,7 +15,7 @@ import { Title } from '@angular/platform-browser';
 	styleUrls: ['./home.component.scss'],
 	templateUrl: './home.component.html'
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, AfterViewInit {
 	@ViewChild('header', { static: true })
 	public header!: ElementRef<HTMLElement>;
 	@ViewChild('hero', { static: true })
@@ -26,6 +27,13 @@ export class HomePage implements OnInit {
 		public readonly title: Title,
 		private readonly renderer: Renderer2
 	) {}
+	ngAfterViewInit(): void {
+		this.renderer.setStyle(
+			this.showcase.nativeElement,
+			'grid-auto-rows',
+			`${this.showcase.nativeElement.firstElementChild?.clientWidth}px`
+		);
+	}
 	ngOnInit(): void {
 		this.renderer.setStyle(
 			this.hero.nativeElement,
@@ -41,11 +49,6 @@ export class HomePage implements OnInit {
 			'background-image',
 			this.image
 		);
-		this.renderer.setStyle(
-			this.showcase.nativeElement,
-			'grid-auto-rows',
-			`${this.showcase.nativeElement.firstElementChild?.clientWidth}px`
-		);
 	}
 	@HostListener('window:resize')
 	public resize(): void {
@@ -53,11 +56,6 @@ export class HomePage implements OnInit {
 			this.showcase.nativeElement,
 			'grid-auto-rows',
 			`${this.showcase.nativeElement.firstElementChild?.clientWidth}px`
-		);
-
-		console.log(
-			this.showcase.nativeElement.firstElementChild
-				?.clientHeight
 		);
 	}
 }
