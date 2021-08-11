@@ -85,20 +85,20 @@
 		}
 		section:nth-of-type(3) {
 			border-radius: 0.5rem;
-			border: 0.2rem solid black;
 			display: grid;
-			grid-auto-rows: 36rem;
 			grid-gap: 1.5rem;
-			grid-template-columns: repeat(auto-fit, 36rem);
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(14rem, 1fr)
+			);
 			height: min-content;
 			justify-content: center;
 			margin: -2rem auto 1rem auto;
 			padding: 0.75rem;
-			width: calc(100% - 1.5rem);
+			width: 100%;
 			div {
 				border-radius: 0.5rem;
 				border: 0.2rem solid black;
-				height: 100%;
 				margin: 0;
 				padding: 0;
 				width: 100%;
