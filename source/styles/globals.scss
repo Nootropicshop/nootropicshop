@@ -8,7 +8,6 @@
 }
 html {
 	-moz-osx-font-smoothing: grayscale;
-	-ms-overflow-style: none;
 	-ms-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -16,17 +15,10 @@ html {
 	box-sizing: border-box;
 	font-family: $defaultfont;
 	font-size: $defaultfs;
-	height: 100%;
 	margin: 0;
-	overflow-x: hidden;
-	overflow-y: scroll;
 	padding: 0;
-	scrollbar-width: none;
 	width: 100%;
 	word-spacing: 1px;
-	&::-webkit-scrollbar {
-		display: none;
-	}
 }
 body {
 	-moz-osx-font-smoothing: grayscale;
@@ -38,10 +30,7 @@ body {
 	box-sizing: border-box;
 	font-family: $defaultfont;
 	font-size: $defaultfs;
-	height: 100%;
 	margin: 0;
-	overflow-x: hidden;
-	overflow-y: scroll;
 	padding: 0;
 	scrollbar-width: none;
 	width: 100%;

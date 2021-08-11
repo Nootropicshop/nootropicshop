@@ -2,7 +2,6 @@ import { AccountPage } from '@pages/account/account.component';
 import { AnnotationComponent } from '@components/annotation/annotation.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CartPage } from '@pages/cart/cart.component';
-import { ContentComponent } from './../components/content/content.component';
 import { DefaultLayout } from '@layouts/default/default.component';
 import { ExpressComponent } from '@components/express/express.component';
 import { FilterComponent } from '@components/filter/filter.component';
@@ -10,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HeroComponent } from '@components/hero/hero.component';
 import { HomePage } from '@pages/home/home.component';
 import { InfoComponent } from '@components/info/info.component';
-import { MenuPage } from '@pages/menu/menu.component';
+import { MenuComponent } from '@components/menu/menu.component';
+import { MenuService } from '@components/menu/menu.service';
 import { NavigationComponent } from '@components/navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { RootComponent } from '@components/root/root.component';
@@ -36,10 +36,6 @@ const routes: Routes = [
 				path: 'home'
 			},
 			{
-				component: MenuPage,
-				path: 'menu'
-			},
-			{
 				component: ShopPage,
 				path: 'shop'
 			},
@@ -58,14 +54,13 @@ const routes: Routes = [
 		AccountPage,
 		AnnotationComponent,
 		CartPage,
-		ContentComponent,
 		DefaultLayout,
 		ExpressComponent,
 		FilterComponent,
 		HeroComponent,
 		HomePage,
 		InfoComponent,
-		MenuPage,
+		MenuComponent,
 		NavigationComponent,
 		RootComponent,
 		SearchComponent,
@@ -77,6 +72,7 @@ const routes: Routes = [
 		BrowserModule,
 		FormsModule,
 		RouterModule.forRoot(routes)
-	]
+	],
+	providers: [MenuService]
 })
 export class MainModule {}
