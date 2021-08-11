@@ -16,7 +16,6 @@ import { Title } from '@angular/platform-browser';
 export class HomePage implements OnInit {
 	@ViewChild('header', { static: true })
 	public header!: ElementRef<HTMLElement>;
-	private height: number = 0;
 	@ViewChild('hero', { static: true })
 	public hero!: ElementRef<HTMLImageElement>;
 	private image: string = 'url(../../assets//hero.png)';
@@ -25,13 +24,14 @@ export class HomePage implements OnInit {
 		private readonly renderer: Renderer2
 	) {}
 	ngOnInit(): void {
-		this.height =
-			window.screen.availHeight -
-			this.header.nativeElement.offsetHeight;
+		const height: number =
+			(window.screen.availHeight -
+				this.header.nativeElement.offsetHeight) /
+			2;
 		this.renderer.setStyle(
 			this.hero.nativeElement,
 			'height',
-			`${this.height * 0.5}px`
+			`${height}px`
 		);
 		this.renderer.setStyle(
 			this.hero.nativeElement,
